@@ -7,7 +7,8 @@ function About(props) {
   return (
     <div id="about">
       <h2>About Me</h2>
-      {checkBio(props.bio)}
+      {/* {checkBio(props.bio)} */}
+      {props.bio && props.bio.length > 1 ? <p>{props.bio}</p> : <></>}
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
       {/* add your <Links /> component here */}
       <Links linkedin={props.links.linkedin} github={props.links.github} />
